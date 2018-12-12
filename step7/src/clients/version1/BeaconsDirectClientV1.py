@@ -11,7 +11,7 @@
 from pip_services3_commons.refer import Descriptor
 from pip_services3_rpc.clients import DirectClient
 
-from step7.src.clients.version1.IBeaconsClientV1 import IBeaconsClientV1
+from .IBeaconsClientV1 import IBeaconsClientV1
 
 
 class BeaconsDirectClientV1(DirectClient, IBeaconsClientV1):

@@ -13,7 +13,7 @@ import os
 from pip_services3_commons.config import ConfigParams
 
 from step7.src.persistence.BeaconsMongoDbPersistence import BeaconsMongoDbPersistence
-from step7.test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceFixture
+from .BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
 
 class TestBeaconMongoDbPersistence():

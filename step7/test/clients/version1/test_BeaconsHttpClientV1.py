@@ -15,7 +15,7 @@ from step7.src.clients.version1.BeaconsHttpClientV1 import BeaconsHttpClientV1
 from step7.src.logic.BeaconsController import BeaconsController
 from step7.src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
 from step7.src.services.version1.BeaconsHttpServiceV1 import BeaconsHttpServiceV1
-from step7.test.clients.version1.BeaconsClientV1Fixture import BeaconsClientV1Fixture
+from .BeaconsClientV1Fixture import BeaconsClientV1Fixture
 
 http_config = ConfigParams.from_tuples(
             'connection.protocol', 'http',

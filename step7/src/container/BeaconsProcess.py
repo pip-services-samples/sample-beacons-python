@@ -13,7 +13,7 @@ import sys
 from pip_services3_container import ProcessContainer
 from pip_services3_rpc.build import DefaultRpcFactory
 
-from step7.src.build.BeaconsServiceFactory import BeaconsServiceFactory
+from ..build.BeaconsServiceFactory import BeaconsServiceFactory
 
 
 class BeaconsProcess(ProcessContainer):

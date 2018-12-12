@@ -9,7 +9,7 @@
     :license: MIT, see LICENSE for more details.
 """
 from step7.src.persistence.BeaconsFilePersistence import BeaconsFilePersistence
-from step7.test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceFixture
+from .BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
 class TestBeaconFilePersistence():
     @classmethod

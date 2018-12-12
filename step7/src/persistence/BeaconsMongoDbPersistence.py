@@ -10,7 +10,7 @@
 """
 from pip_services3_commons.data import FilterParams
 from pip_services3_mongodb.persistence import IdentifiableMongoDbPersistence
-from step7.src.persistence.IBeaconsPersistence import IBeaconsPersistence
+from .IBeaconsPersistence import IBeaconsPersistence
 
 class BeaconsMongoDbPersistence(IdentifiableMongoDbPersistence, IBeaconsPersistence):
 

@@ -10,7 +10,7 @@
 """
 from pip_services3_data.persistence import JsonFilePersister
 
-from step7.src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
+from .BeaconsMemoryPersistence import BeaconsMemoryPersistence
 
 class BeaconsFilePersistence(BeaconsMemoryPersistence):
     _persister = None

@@ -9,7 +9,7 @@
     :license: MIT, see LICENSE for more details.
 """
 from step7.src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
-from step7.test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceFixture
+from .BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
 
 class TestBeaconMemoryPersistence():

@@ -14,7 +14,7 @@ from pip_services3_commons.convert import TypeCode
 from pip_services3_commons.data import FilterParams, PagingParams
 from pip_services3_commons.validate import ObjectSchema, FilterParamsSchema, PagingParamsSchema, ArraySchema
 
-from step7.src.data.version1 import BeaconV1Schema
+from ..data.version1 import BeaconV1Schema
 
 
 class BeaconsCommandSet(CommandSet):

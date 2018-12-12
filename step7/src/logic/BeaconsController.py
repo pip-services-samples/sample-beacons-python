@@ -13,8 +13,8 @@ from pip_services3_commons.config import IConfigurable
 from pip_services3_commons.data import FilterParams
 from pip_services3_commons.refer import IReferenceable, Descriptor
 
-from step7.src.logic.IBeaconsController import IBeaconsController
-from step7.src.logic.BeaconsCommandSet import BeaconsCommandSet
+from ..logic.IBeaconsController import IBeaconsController
+from ..logic.BeaconsCommandSet import BeaconsCommandSet
 
 
 class BeaconsController(IBeaconsController, IConfigurable, IReferenceable, ICommandable):

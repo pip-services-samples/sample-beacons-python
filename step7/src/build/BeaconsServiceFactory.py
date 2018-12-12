@@ -11,11 +11,11 @@
 from pip_services3_commons.refer import Descriptor
 from pip_services3_components.build import Factory
 
-from step7.src.logic.BeaconsController import BeaconsController
-from step7.src.persistence.BeaconsFilePersistence import BeaconsFilePersistence
-from step7.src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
-from step7.src.persistence.BeaconsMongoDbPersistence import BeaconsMongoDbPersistence
-from step7.src.services.version1.BeaconsHttpServiceV1 import BeaconsHttpServiceV1
+from ..logic.BeaconsController import BeaconsController
+from ..persistence.BeaconsFilePersistence import BeaconsFilePersistence
+from ..persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
+from ..persistence.BeaconsMongoDbPersistence import BeaconsMongoDbPersistence
+from ..services.version1.BeaconsHttpServiceV1 import BeaconsHttpServiceV1
 
 MemoryPersistenceDescriptor = Descriptor('beacons', 'persistence', 'memory', '*', '1.0')
 FilePersistenceDescriptor = Descriptor('beacons', 'persistence', 'file', '*', '1.0')

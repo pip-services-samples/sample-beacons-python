@@ -12,7 +12,7 @@
 from pip_services3_commons.data import DataPage
 from pip_services3_rpc.clients import CommandableHttpClient
 
-from step7.src.clients.version1.IBeaconsClientV1 import IBeaconsClientV1
+from .IBeaconsClientV1 import IBeaconsClientV1
 
 
 class BeaconsHttpClientV1(CommandableHttpClient, IBeaconsClientV1):
