@@ -28,7 +28,7 @@ class BeaconsProcess(ProcessContainer):
             process = BeaconsProcess()
             process.run(argv)
         except Exception as ex:
-            print(ex)
+
 
     if __name__ == "__main__":
         main(sys.argv)

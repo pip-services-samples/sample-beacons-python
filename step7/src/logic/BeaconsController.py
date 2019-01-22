@@ -20,6 +20,9 @@ from ..logic.BeaconsCommandSet import BeaconsCommandSet
 class BeaconsController(IBeaconsController, IConfigurable, IReferenceable, ICommandable):
     _persistence = None
     _commandSet = None
+    def __init__(self):
+        pass
+
 
     def configure(self, config):
         pass

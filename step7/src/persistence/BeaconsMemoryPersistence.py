@@ -18,7 +18,6 @@ class BeaconsMemoryPersistence(IdentifiableMemoryPersistence, IBeaconsPersistenc
 
     def __init__(self):
         super(BeaconsMemoryPersistence, self).__init__()
-
         self._maxPageSize = 1000
 
     def get_page_by_filter(self, correlation_id, filter, paging):

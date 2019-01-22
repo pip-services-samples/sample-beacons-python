@@ -22,7 +22,6 @@ class BeaconsCommandSet(CommandSet):
 
     def __init__(self, controller):
         super(BeaconsCommandSet, self).__init__()
-
         self._controller = controller
 
         self.add_command(self.make_get_beacons_command())

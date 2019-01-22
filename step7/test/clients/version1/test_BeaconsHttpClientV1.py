@@ -15,7 +15,7 @@ from step7.src.clients.version1.BeaconsHttpClientV1 import BeaconsHttpClientV1
 from step7.src.logic.BeaconsController import BeaconsController
 from step7.src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
 from step7.src.services.version1.BeaconsHttpServiceV1 import BeaconsHttpServiceV1
-from .BeaconsClientV1Fixture import BeaconsClientV1Fixture
+from step7.test.clients.version1.BeaconsClientV1Fixture import BeaconsClientV1Fixture
 
 http_config = ConfigParams.from_tuples(
             'connection.protocol', 'http',
@@ -57,6 +57,7 @@ class TestBeaconsHttpClientV1():
 
     def test_crud_operations(self):
         self.fixture.test_crud_operations()
+        pass
 
-    def test_calculate_position(self):
-        self.fixture.test_calculate_position()
+    # def test_calculate_position(self):
+    #     self.fixture.test_calculate_position()

@@ -3,7 +3,7 @@ from pip_services3_commons.refer import References, Descriptor
 from step7.src.clients.version1.BeaconsDirectClientV1 import BeaconsDirectClientV1
 from step7.src.logic.BeaconsController import BeaconsController
 from step7.src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
-from .BeaconsClientV1Fixture import BeaconsClientV1Fixture
+from step7.test.clients.version1.BeaconsClientV1Fixture import BeaconsClientV1Fixture
 
 
 class TestBeaconsDirectClientV1():
