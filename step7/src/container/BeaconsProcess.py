@@ -23,13 +23,3 @@ class BeaconsProcess(ProcessContainer):
         self._factories.add(BeaconsServiceFactory())
         self._factories.add(DefaultRpcFactory())
 
-    def main(argv):
-        try:
-            process = BeaconsProcess()
-            process.run(argv)
-        except Exception as ex:
-
-
-    if __name__ == "__main__":
-        main(sys.argv)
-

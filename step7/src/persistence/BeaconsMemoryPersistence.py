@@ -52,9 +52,4 @@ class BeaconsMemoryPersistence(IdentifiableMemoryPersistence, IBeaconsPersistenc
         for item in self._items:
             if udi == item['udi']:
                 return item
-        #
-        # if item == None:
-        #     self._logger.trace(correlation_id, "Found beacon by %s", udi)
-        # else:
-        #     self._logger.trace(correlation_id, "Cannot find beacon by %s", udi)
 
