@@ -19,7 +19,6 @@ class BeaconsClientV1Fixture():
     _client = None
 
     def __init__(self, client):
-#        assert client != None
         self._client = client
 
     def test_crud_operations(self):
@@ -46,7 +45,7 @@ class BeaconsClientV1Fixture():
         assert beacon2['center'] != None
 
         # Get all beacons
-        page = self._client.get_beacons_by_filter(None, FilterParams(), PagingParams())
+        page = self._client.get_beacons_by_filter(None, None, None)
         assert page != None
         assert len(page.data) == 2
 
@@ -64,6 +63,14 @@ class BeaconsClientV1Fixture():
         assert beacon != None
         assert beacon['id'] == beacon1['id']
 
+        #Calculate position for one beacon
+        position = self._client.calculate_position(None, '1', ['00001'])
+        assert position != None
+        assert "Point" == position["type"]
+        assert 2 == len(position["coordinates"])
+        assert 0 == position["coordinates"][0]
+        assert 0 == position["coordinates"][1]
+
         # Delete beacon
         self._client.delete_beacon_by_id(None, beacon1['id'])
 
@@ -73,14 +80,14 @@ class BeaconsClientV1Fixture():
 
     def test_calculate_position(self):
         # Create the first beacon
-        beacon1 = self._client.create_beacon(None, BEACON1)
+        beacon1 = self._client.create_beacon(None, BEACON3)
 
         assert beacon1 != None
-        assert beacon1['id'] == BEACON1['id']
-        assert beacon1['site_id'] == BEACON1['site_id']
-        assert beacon1['udi'] == BEACON1['udi']
-        assert beacon1['type'] == BEACON1['type']
-        assert beacon1['label'] == BEACON1['label']
+        assert beacon1['id'] == BEACON3['id']
+        assert beacon1['site_id'] == BEACON3['site_id']
+        assert beacon1['udi'] == BEACON3['udi']
+        assert beacon1['type'] == BEACON3['type']
+        assert beacon1['label'] == BEACON3['label']
         assert beacon1['center'] != None
 
         # Create the second beacon
@@ -95,10 +102,10 @@ class BeaconsClientV1Fixture():
         assert beacon2['center'] != None
 
         #Calculate position for one beacon
-        position = self._client.calculate_position(None, '1', ['00001'])
+        position = self._client.calculate_position(None, '2', ['00003'])
         assert position != None
         assert "Point" == position["type"]
         assert 2 == len(position["coordinates"])
-        assert 0 == position["coordinates"][0]
-        assert 0 == position["coordinates"][1]
+        assert 10 == position["coordinates"][0]
+        assert 10 == position["coordinates"][1]
 
