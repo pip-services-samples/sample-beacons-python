@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step4.data.version1.BeaconTypeV1
+    step.data.version1.BeaconTypeV1
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Beacon Type class

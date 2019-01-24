@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step6.logic.BeaconsCommandSet
+    step7.logic.BeaconsCommandSet
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsCommandSet class
@@ -14,7 +14,7 @@ from pip_services3_commons.convert import TypeCode
 from pip_services3_commons.data import FilterParams, PagingParams
 from pip_services3_commons.validate import ObjectSchema, FilterParamsSchema, PagingParamsSchema, ArraySchema
 
-from step6.src.data.version1 import BeaconV1Schema
+from ..data.version1 import BeaconV1Schema
 
 
 class BeaconsCommandSet(CommandSet):
@@ -22,7 +22,6 @@ class BeaconsCommandSet(CommandSet):
 
     def __init__(self, controller):
         super(BeaconsCommandSet, self).__init__()
-
         self._controller = controller
 
         self.add_command(self.make_get_beacons_command())
@@ -45,21 +44,21 @@ class BeaconsCommandSet(CommandSet):
         def handler(correlation_id, args):
             id = args.get_as_string("id")
             return self._controller.get_beacon_by_id(correlation_id, id)
-        return Command("get_beacon_by_id", ObjectSchema().with_required_property("id", TypeCode.String), handler)
+        return Command("get_beacon_by_id", ObjectSchema().with_required_property("id", "String"), handler)
 
     def make_get_beacon_by_udi_command(self):
         def handler(correlation_id, args):
             id = args.get_as_string("udi")
             return self._controller.get_beacon_by_udi(correlation_id, id)
-        return Command("get_beacon_by_udi", ObjectSchema().with_required_property("udi", TypeCode.String), handler)
+        return Command("get_beacon_by_udi", ObjectSchema().with_required_property("udi", "String"), handler)
 
     def make_calculate_position_command(self):
         def handler(correlation_id, args):
             site_id = args.get_as_string("site_id")
             udis = args.get_as_nullable_string("udis")
             return self._controller.calculate_position(correlation_id, site_id, udis)
-        return Command("calculate_position", ObjectSchema().with_required_property("site_id", TypeCode.String)
-                       .with_required_property("udis", ArraySchema(TypeCode.String)), handler)
+        return Command("calculate_position", ObjectSchema().with_required_property("site_id", "String")
+                       .with_required_property("udis", ArraySchema("String")), handler)
 
     def make_create_beacon_command(self):
         def handler(correlation_id, args):
@@ -77,5 +76,5 @@ class BeaconsCommandSet(CommandSet):
         def handler(correlation_id, args):
             id = args.get_as_string("id")
             return self._controller.delete_beacon_by_id(correlation_id, id)
-        return Command("delete_beacon_by_id", ObjectSchema().with_required_property("id", TypeCode.String), handler)
+        return Command("delete_beacon_by_id", ObjectSchema().with_required_property("id", "String"), handler)
 

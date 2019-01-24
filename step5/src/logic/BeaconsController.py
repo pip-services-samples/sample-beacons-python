@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step5.logic.BeaconsController
+    step7.logic.BeaconsController
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsController class
@@ -13,13 +13,16 @@ from pip_services3_commons.config import IConfigurable
 from pip_services3_commons.data import FilterParams
 from pip_services3_commons.refer import IReferenceable, Descriptor
 
-from step5.src.logic.IBeaconsController import IBeaconsController
-from step5.src.logic.BeaconsCommandSet import BeaconsCommandSet
+from ..logic.IBeaconsController import IBeaconsController
+from ..logic.BeaconsCommandSet import BeaconsCommandSet
 
 
 class BeaconsController(IBeaconsController, IConfigurable, IReferenceable, ICommandable):
     _persistence = None
     _commandSet = None
+    def __init__(self):
+        pass
+
 
     def configure(self, config):
         pass

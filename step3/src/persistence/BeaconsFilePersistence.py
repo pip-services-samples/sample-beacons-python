@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step3.persistence.BeaconsFilePersistence
+    step7.persistence.BeaconsFilePersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsFilePersistence class
@@ -10,7 +10,7 @@
 """
 from pip_services3_data.persistence import JsonFilePersister
 
-from step3.src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
+from .BeaconsMemoryPersistence import BeaconsMemoryPersistence
 
 class BeaconsFilePersistence(BeaconsMemoryPersistence):
     _persister = None

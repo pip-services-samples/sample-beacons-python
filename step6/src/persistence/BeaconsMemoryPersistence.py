@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step6.persistence.BeaconsMemoryPersistence
+    step7.persistence.BeaconsMemoryPersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsMemoryPersistence class
@@ -11,14 +11,13 @@
 from pip_services3_commons.data import FilterParams
 from pip_services3_data.persistence import IdentifiableMemoryPersistence
 
-from step6.src.persistence.IBeaconsPersistence import IBeaconsPersistence
+from .IBeaconsPersistence import IBeaconsPersistence
 
 
 class BeaconsMemoryPersistence(IdentifiableMemoryPersistence, IBeaconsPersistence):
 
     def __init__(self):
         super(BeaconsMemoryPersistence, self).__init__()
-
         self._maxPageSize = 1000
 
     def get_page_by_filter(self, correlation_id, filter, paging):
@@ -53,9 +52,4 @@ class BeaconsMemoryPersistence(IdentifiableMemoryPersistence, IBeaconsPersistenc
         for item in self._items:
             if udi == item['udi']:
                 return item
-        #
-        # if item == None:
-        #     self._logger.trace(correlation_id, "Found beacon by %s", udi)
-        # else:
-        #     self._logger.trace(correlation_id, "Cannot find beacon by %s", udi)
 

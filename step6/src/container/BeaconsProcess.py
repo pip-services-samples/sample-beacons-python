@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step6.container.BeaconsProcess
+    step7.container.BeaconsProcess
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsProcess class
@@ -13,7 +13,7 @@ import sys
 from pip_services3_container import ProcessContainer
 from pip_services3_rpc.build import DefaultRpcFactory
 
-from step6.src.build.BeaconsServiceFactory import BeaconsServiceFactory
+from ..build.BeaconsServiceFactory import BeaconsServiceFactory
 
 
 class BeaconsProcess(ProcessContainer):
@@ -22,14 +22,4 @@ class BeaconsProcess(ProcessContainer):
 
         self._factories.add(BeaconsServiceFactory())
         self._factories.add(DefaultRpcFactory())
-
-    def main(argv):
-        try:
-            process = BeaconsProcess()
-            process.run(argv)
-        except Exception as ex:
-            print(ex)
-
-    if __name__ == "__main__":
-        main(sys.argv)
 

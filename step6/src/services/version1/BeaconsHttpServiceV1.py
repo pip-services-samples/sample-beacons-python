@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step6.services.BeaconsHttpServiceV1
+    step7.services.BeaconsHttpServiceV1
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsHttpServiceV1 class

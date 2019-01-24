@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step4.logic.BeaconsController
+    step7.logic.BeaconsController
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsController class
@@ -8,19 +8,29 @@
     :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
-
+from pip_services3_commons.commands import ICommandable
 from pip_services3_commons.config import IConfigurable
 from pip_services3_commons.data import FilterParams
 from pip_services3_commons.refer import IReferenceable, Descriptor
 
-from step4.src.logic.IBeaconsController import IBeaconsController
+from ..logic.IBeaconsController import IBeaconsController
+from ..logic.BeaconsCommandSet import BeaconsCommandSet
 
 
-class BeaconsController(IBeaconsController, IConfigurable, IReferenceable):
+class BeaconsController(IBeaconsController, IConfigurable, IReferenceable, ICommandable):
     _persistence = None
+    _commandSet = None
+    def __init__(self):
+        pass
+
 
     def configure(self, config):
         pass
+
+    def get_command_set(self):
+        if self._commandSet == None:
+            self._commandSet = BeaconsCommandSet(self)
+        return self._commandSet
 
     def set_references(self, references):
         self._persistence = references.get_one_required(Descriptor("beacons", "persistence", "*", "*", "1.0"))

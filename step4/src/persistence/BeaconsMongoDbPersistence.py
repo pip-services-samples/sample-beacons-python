@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step4.persistence.BeaconsMongoDbPersistence
+    step7.persistence.BeaconsMongoDbPersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsMongoDbPersistence class
@@ -10,7 +10,7 @@
 """
 from pip_services3_commons.data import FilterParams
 from pip_services3_mongodb.persistence import IdentifiableMongoDbPersistence
-from step4.src.persistence.IBeaconsPersistence import IBeaconsPersistence
+from .IBeaconsPersistence import IBeaconsPersistence
 
 class BeaconsMongoDbPersistence(IdentifiableMongoDbPersistence, IBeaconsPersistence):
 
