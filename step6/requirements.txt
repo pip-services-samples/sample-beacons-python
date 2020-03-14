@@ -1,0 +1,13 @@
+iso8601
+PyYAML
+pytest
+#Sphinx
+pymongo
+numpy
+pytz
+pip_services3_commons
+pip_services3_components
+pip_services3_container
+pip_services3_data
+pip_services3_mongodb
+pip_services3_rpc

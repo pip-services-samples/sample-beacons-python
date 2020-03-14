@@ -14,7 +14,7 @@ from step4.test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceF
 class TestBeaconFilePersistence():
     @classmethod
     def setup_class(cls):
-        cls.persistence = BeaconsFilePersistence("../../data/beacons.test.json")
+        cls.persistence = BeaconsFilePersistence("./data/beacons.test.json")
         cls.fixture = BeaconsPersistenceFixture(cls.persistence)
 
     def setup_method(self, method):
