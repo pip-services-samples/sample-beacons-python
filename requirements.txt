@@ -7,6 +7,7 @@ pybars3
 numpy
 bottle
 requests
+netifaces==0.10.9
 pymongo
 pip_services3_commons
 pip_services3_components
@@ -14,4 +15,5 @@ pip_services3_rpc
 pip_services3_container
 pip_services3_data
 pip_services3_mongodb
+
 
