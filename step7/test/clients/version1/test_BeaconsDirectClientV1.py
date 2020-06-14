@@ -5,6 +5,7 @@ from step7.src.logic.BeaconsController import BeaconsController
 from step7.src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
 from step7.test.clients.version1.BeaconsClientV1Fixture import BeaconsClientV1Fixture
 
+from step7.src.logic.BeaconsController import BeaconsController
 
 class TestBeaconsDirectClientV1():
     @classmethod
