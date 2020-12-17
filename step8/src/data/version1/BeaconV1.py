@@ -9,8 +9,10 @@
     :license: MIT, see LICENSE for more details.
 """
 
+
 class BeaconV1(dict):
     def __init__(self, id, site_id, type, udi, label, center, radius):
+        super(BeaconV1, self).__init__()
         self['id'] = id
         self['site_id'] = site_id
         self['type'] = type
@@ -19,3 +21,6 @@ class BeaconV1(dict):
         self['center'] = center
         self['radius'] = radius
 
+        # set class attributes in runtime
+        for attr in self:
+            setattr(self, attr, self[attr])
