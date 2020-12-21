@@ -4,7 +4,6 @@ pytest
 #Sphinx
 pystache
 pybars3
-numpy
 bottle
 requests
 netifaces==0.10.9
