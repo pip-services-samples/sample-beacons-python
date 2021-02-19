@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    step8.test.TestBeaconMongoDbPersistence
+    step7.test.TestBeaconMongoDbPersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     TestBeaconMongoDbPersistence class
@@ -14,7 +14,7 @@ import os
 
 from pip_services3_commons.config import ConfigParams
 
-from step7.src.persistence.BeaconsMongoDbPersistence import BeaconsMongoDbPersistence
+from src.persistence.BeaconsMongoDbPersistence import BeaconsMongoDbPersistence
 from .BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
 

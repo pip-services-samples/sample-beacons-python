@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.build.BeaconsServiceFactory
+    step9.build.BeaconsServiceFactory
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsServiceFactory class

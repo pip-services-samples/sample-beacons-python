@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.persistence.BeaconsMongoDbPersistence
+    step9.persistence.BeaconsMongoDbPersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsMongoDbPersistence class
@@ -16,6 +16,7 @@ class BeaconsMongoDbPersistence(IdentifiableMongoDbPersistence, IBeaconsPersiste
 
     def __init__(self):
         super(BeaconsMongoDbPersistence, self).__init__("beacons")
+        self._ensure_index({'site_id':1})
         self._maxPageSize = 1000
 
     def compose_filter(self, filter):

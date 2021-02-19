@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.persistence.BeaconsMemoryPersistence
+    step9.persistence.BeaconsMemoryPersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsMemoryPersistence class

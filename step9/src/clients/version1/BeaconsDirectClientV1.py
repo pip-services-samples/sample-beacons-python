@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.clients.BeaconsDirectClientV1
+    step9.clients.BeaconsDirectClientV1
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsDirectClientV1 class

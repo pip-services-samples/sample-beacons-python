@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.test.TestBeaconMemoryPersistence
+    step9.test.TestBeaconMemoryPersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     TestBeaconMemoryPersistence class

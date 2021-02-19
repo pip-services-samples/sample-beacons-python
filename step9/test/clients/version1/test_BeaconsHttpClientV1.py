@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.test.TestBeaconsHttpClientV1
+    step9.test.TestBeaconsHttpClientV1
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     TestBeaconsHttpClientV1 class

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.persistence.IBeaconsPersistence
+    step9.persistence.IBeaconsPersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     IBeaconsPersistence class

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.test.BeaconsControllerTest
+    step9.test.BeaconsControllerTest
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsControllerTest class

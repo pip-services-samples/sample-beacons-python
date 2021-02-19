@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.logic.BeaconsController
+    step9.logic.BeaconsController
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsController class

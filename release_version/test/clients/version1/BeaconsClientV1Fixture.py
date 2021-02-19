@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.test.BeaconsClientV1Fixture
+    step9.test.BeaconsClientV1Fixture
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsClientV1Fixture class

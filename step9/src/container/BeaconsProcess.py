@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.container.BeaconsProcess
+    step9.container.BeaconsProcess
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsProcess class

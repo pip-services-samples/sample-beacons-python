@@ -28,7 +28,7 @@ The implementation is divided into 9 steps:
 * [Step 5](step5): Implementing HTTP service using command pattern
 * [Step 6](step6): Wrapping the service into container
 * [Step 7](step7): Implementing client SDK with tests
-* [Step 8](step8): Dockerizing the microservice
+* [Step 8](step9): Dockerizing the microservice
 * [Step 9](step9): Deploying to kubernetes (minikube)
 
 Happy microservice development!

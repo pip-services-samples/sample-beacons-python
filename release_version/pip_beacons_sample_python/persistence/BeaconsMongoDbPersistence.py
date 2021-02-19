@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.persistence.BeaconsMongoDbPersistence
+    step9.persistence.BeaconsMongoDbPersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsMongoDbPersistence class

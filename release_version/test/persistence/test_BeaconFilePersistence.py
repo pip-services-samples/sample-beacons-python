@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.test.TestBeaconFilePersistence
+    step9.test.TestBeaconFilePersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     TestBeaconFilePersistence class

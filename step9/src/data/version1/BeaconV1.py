@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.data.version1.BeaconV1
+    step9.data.version1.BeaconV1
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconV1 class

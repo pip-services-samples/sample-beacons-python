@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.clients.IBeaconsClientV1
+    step9.clients.IBeaconsClientV1
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     IBeaconsClientV1 interface

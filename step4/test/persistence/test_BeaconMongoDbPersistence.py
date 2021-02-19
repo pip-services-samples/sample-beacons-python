@@ -14,8 +14,8 @@ import os
 
 from pip_services3_commons.config import ConfigParams
 
-from step4.src.persistence.BeaconsMongoDbPersistence import BeaconsMongoDbPersistence
-from step4.test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceFixture
+from src.persistence.BeaconsMongoDbPersistence import BeaconsMongoDbPersistence
+from .BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
 
 class TestBeaconMongoDbPersistence:
