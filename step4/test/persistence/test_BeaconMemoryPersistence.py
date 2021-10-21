@@ -8,8 +8,8 @@
     :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
-from step4.src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
-from step4.test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceFixture
+from src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
+from test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
 
 class TestBeaconMemoryPersistence():
@@ -26,4 +26,3 @@ class TestBeaconMemoryPersistence():
 
     def test_get_with_filter(self):
         self.fixture.test_get_with_filter()
-

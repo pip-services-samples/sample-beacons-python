@@ -21,7 +21,7 @@ class BeaconsMemoryPersistence(IdentifiableMemoryPersistence, IBeaconsPersistenc
         self._maxPageSize = 1000
 
     def get_page_by_filter(self, correlation_id, filter, paging):
-        filter = filter if filter != None else FilterParams()
+        filter = filter or FilterParams()
 
         id = filter.get_as_nullable_string("id")
         site_id = filter.get_as_nullable_string("site_id")
@@ -32,15 +32,15 @@ class BeaconsMemoryPersistence(IdentifiableMemoryPersistence, IBeaconsPersistenc
             udis = udis.split(",")
 
         def filter_beacons(item):
-            if id != None and item['id'] != id:
+            if id is not None and item.id != id:
                 return False
-            if site_id != None and item['site_id'] != site_id:
+            if site_id is not None and item.site_id != site_id:
                 return False
-            if label != None and item['label'] != label:
+            if label is not None and item.label != label:
                 return False
-            if udi != None and item['udi'] != udi:
+            if udi is not None and item.udi != udi:
                 return False
-            if udis != None and item['udi'] not in udis:
+            if udis is not None and item.udi not in udis:
                 return False
             return True
 
@@ -50,6 +50,5 @@ class BeaconsMemoryPersistence(IdentifiableMemoryPersistence, IBeaconsPersistenc
         if udi == None:
             return None
         for item in self._items:
-            if udi == item['udi']:
+            if udi == item.udi:
                 return item
-

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step7.container.BeaconsProcess
+    step6.container.BeaconsProcess
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsProcess class
@@ -9,7 +9,6 @@
     :license: MIT, see LICENSE for more details.
 """
 import sys
-
 from pip_services3_container import ProcessContainer
 from pip_services3_rpc.build import DefaultRpcFactory
 
@@ -22,4 +21,3 @@ class BeaconsProcess(ProcessContainer):
 
         self._factories.add(BeaconsServiceFactory())
         self._factories.add(DefaultRpcFactory())
-

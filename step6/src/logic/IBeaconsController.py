@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step7.logic.IBeaconsController
+    step6.logic.IBeaconsController
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     IBeaconsController class
@@ -9,7 +9,10 @@
     :license: MIT, see LICENSE for more details.
 """
 
-class IBeaconsController():
+from abc import ABC
+
+
+class IBeaconsController(ABC):
     def get_beacons_by_filter(self, correlation_id, filter, paging):
         raise NotImplementedError('Method from interface definition')
 

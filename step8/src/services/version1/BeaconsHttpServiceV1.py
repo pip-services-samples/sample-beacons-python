@@ -11,6 +11,7 @@
 from pip_services3_commons.refer import Descriptor
 from pip_services3_rpc.services import CommandableHttpService
 
+
 class BeaconsHttpServiceV1(CommandableHttpService):
     def __init__(self):
         super(BeaconsHttpServiceV1, self).__init__("v1/beacons")

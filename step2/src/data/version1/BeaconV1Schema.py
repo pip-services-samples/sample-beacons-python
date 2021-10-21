@@ -9,12 +9,13 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from pip_services_commons.validate.ObjectSchema import ObjectSchema
 from pip_services_commons.convert.TypeCode import TypeCode
+from pip_services_commons.validate.ObjectSchema import ObjectSchema
+
 
 class BeaconV1Schema(ObjectSchema):
     def __init__(self):
-        super(ObjectSchema, self).__init__()
+        super().__init__()
 
         self.with_optional_property("id", TypeCode.String)
         self.with_required_property("siteId", TypeCode.String)

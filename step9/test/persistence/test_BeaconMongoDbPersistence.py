@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    step8.test.TestBeaconMongoDbPersistence
+    step9.test.TestBeaconMongoDbPersistence
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     TestBeaconMongoDbPersistence class

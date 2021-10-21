@@ -60,4 +60,3 @@ class BeaconsDirectClientV1(DirectClient, IBeaconsClientV1):
         result = self._controller.delete_beacon_by_id(correlation_id, id)
         timing.end_timing()
         return result
-

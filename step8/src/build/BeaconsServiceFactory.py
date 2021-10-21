@@ -23,6 +23,7 @@ MongoDbPersistenceDescriptor = Descriptor('beacons', 'persistence', 'mongodb', '
 ControllerDescriptor = Descriptor('beacons', 'controller', 'default', '*', '1.0')
 HttpServiceV1Descriptor = Descriptor('beacons', 'service', 'http', '*', '1.0')
 
+
 class BeaconsServiceFactory(Factory):
     def __init__(self):
         super(BeaconsServiceFactory, self).__init__()

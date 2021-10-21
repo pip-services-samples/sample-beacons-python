@@ -8,7 +8,6 @@
     :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
-import time
 
 from pip_services3_commons.config import ConfigParams
 from pip_services3_commons.refer import References, Descriptor
@@ -20,9 +19,10 @@ from src.services.version1.BeaconsHttpServiceV1 import BeaconsHttpServiceV1
 from test.clients.version1.BeaconsClientV1Fixture import BeaconsClientV1Fixture
 
 http_config = ConfigParams.from_tuples(
-            'connection.protocol', 'http',
-            'connection.port', 3000,
-            'connection.host', 'localhost')
+    'connection.protocol', 'http',
+    'connection.port', 3000,
+    'connection.host', 'localhost')
+
 
 class TestBeaconsHttpClientV1():
     @classmethod
@@ -48,14 +48,14 @@ class TestBeaconsHttpClientV1():
 
         cls.fixture = BeaconsClientV1Fixture(cls.client)
 
-        #cls.persistence.open(None)
+        # cls.persistence.open(None)
         cls.service.open(None)
         cls.client.open(None)
 
     def teardown_method(self, method):
         self.client.close(None)
         self.service.close(None)
-        #self.persistence.close(None)
+        # self.persistence.close(None)
 
     def test_crud_operations(self):
         self.fixture.test_crud_operations()

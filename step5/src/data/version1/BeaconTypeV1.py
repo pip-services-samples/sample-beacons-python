@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step.data.version1.BeaconTypeV1
+    step5.data.version1.BeaconTypeV1
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Beacon Type class
@@ -9,7 +9,8 @@
     :license: MIT, see LICENSE for more details.
 """
 
-class BeaconTypeV1():
+
+class BeaconTypeV1:
     Unknown = "unknown"
     AltBeacon = "altbeacon"
     iBeacon = "ibeacons"

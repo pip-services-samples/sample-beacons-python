@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.build.BeaconsServiceFactory
+    step9.build.BeaconsServiceFactory
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsServiceFactory class
@@ -22,6 +22,7 @@ FilePersistenceDescriptor = Descriptor('beacons', 'persistence', 'file', '*', '1
 MongoDbPersistenceDescriptor = Descriptor('beacons', 'persistence', 'mongodb', '*', '1.0')
 ControllerDescriptor = Descriptor('beacons', 'controller', 'default', '*', '1.0')
 HttpServiceV1Descriptor = Descriptor('beacons', 'service', 'http', '*', '1.0')
+
 
 class BeaconsServiceFactory(Factory):
     def __init__(self):

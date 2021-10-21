@@ -8,7 +8,6 @@
     :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
-import sys
 
 from pip_services3_container import ProcessContainer
 from pip_services3_rpc.build import DefaultRpcFactory
@@ -22,4 +21,3 @@ class BeaconsProcess(ProcessContainer):
 
         self._factories.add(BeaconsServiceFactory())
         self._factories.add(DefaultRpcFactory())
-

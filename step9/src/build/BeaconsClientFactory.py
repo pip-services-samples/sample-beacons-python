@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from pip_services3_components.build.Factory import Factory
 from pip_services3_commons.refer.Descriptor import Descriptor
+from pip_services3_components.build.Factory import Factory
 
 from ..clients.version1.BeaconsDirectClientV1 import BeaconsDirectClientV1
 from ..clients.version1.BeaconsHttpClientV1 import BeaconsHttpClientV1

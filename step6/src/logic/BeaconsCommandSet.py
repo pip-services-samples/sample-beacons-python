@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step7.logic.BeaconsCommandSet
+    step6.logic.BeaconsCommandSet
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     BeaconsCommandSet class
@@ -37,19 +37,22 @@ class BeaconsCommandSet(CommandSet):
             filter = FilterParams.from_value(args.get("filter"))
             paging = PagingParams.from_value(args.get("paging"))
             return self._controller.get_beacons_by_filter(correlation_id, filter, paging)
+
         return Command("get_beacons", ObjectSchema().with_optional_property("filter", FilterParamsSchema())
-                                                    .with_optional_property("paging", PagingParamsSchema()), handler)
+                       .with_optional_property("paging", PagingParamsSchema()), handler)
 
     def make_get_beacon_by_id_command(self):
         def handler(correlation_id, args):
             id = args.get_as_string("id")
             return self._controller.get_beacon_by_id(correlation_id, id)
+
         return Command("get_beacon_by_id", ObjectSchema().with_required_property("id", "String"), handler)
 
     def make_get_beacon_by_udi_command(self):
         def handler(correlation_id, args):
             id = args.get_as_string("udi")
             return self._controller.get_beacon_by_udi(correlation_id, id)
+
         return Command("get_beacon_by_udi", ObjectSchema().with_required_property("udi", "String"), handler)
 
     def make_calculate_position_command(self):
@@ -57,6 +60,7 @@ class BeaconsCommandSet(CommandSet):
             site_id = args.get_as_string("site_id")
             udis = args.get_as_nullable_string("udis")
             return self._controller.calculate_position(correlation_id, site_id, udis)
+
         return Command("calculate_position", ObjectSchema().with_required_property("site_id", "String")
                        .with_required_property("udis", ArraySchema("String")), handler)
 
@@ -64,17 +68,19 @@ class BeaconsCommandSet(CommandSet):
         def handler(correlation_id, args):
             entity = args.get("beacon")
             return self._controller.create_beacon(correlation_id, entity)
+
         return Command("create_beacon", ObjectSchema().with_optional_property("beacon", BeaconV1Schema()), handler)
 
     def make_update_beacon_command(self):
         def handler(correlation_id, args):
             entity = args.get("beacon")
             return self._controller.update_beacon(correlation_id, entity)
+
         return Command("update_beacon", ObjectSchema().with_optional_property("beacon", BeaconV1Schema()), handler)
 
     def make_delete_beacon_by_id_command(self):
         def handler(correlation_id, args):
             id = args.get_as_string("id")
             return self._controller.delete_beacon_by_id(correlation_id, id)
-        return Command("delete_beacon_by_id", ObjectSchema().with_required_property("id", "String"), handler)
 
+        return Command("delete_beacon_by_id", ObjectSchema().with_required_property("id", "String"), handler)

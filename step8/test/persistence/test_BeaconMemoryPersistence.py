@@ -26,4 +26,3 @@ class TestBeaconMemoryPersistence():
 
     def test_get_with_filter(self):
         self.fixture.test_get_with_filter()
-

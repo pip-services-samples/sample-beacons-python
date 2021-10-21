@@ -11,6 +11,7 @@
 from src.persistence.BeaconsFilePersistence import BeaconsFilePersistence
 from .BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
+
 class TestBeaconFilePersistence():
     @classmethod
     def setup_class(cls):

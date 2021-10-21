@@ -12,10 +12,11 @@ from pip_services3_data.persistence import JsonFilePersister
 
 from .BeaconsMemoryPersistence import BeaconsMemoryPersistence
 
+
 class BeaconsFilePersistence(BeaconsMemoryPersistence):
     _persister = None
 
-    def __init__(self, path = None):
+    def __init__(self, path=None):
         super(BeaconsFilePersistence, self).__init__()
 
         self._persister = JsonFilePersister(path)

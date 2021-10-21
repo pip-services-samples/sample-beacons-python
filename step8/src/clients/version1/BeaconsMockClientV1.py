@@ -121,10 +121,10 @@ class BeaconsMockClientV1(IBeaconsClientV1):
         count = 0
 
         for beacon in beacons:
-            if beacon['center'] != None and beacon['center']['type'] == "Point" and len(
-                    beacon['center']['coordinates']) > 1:
-                lng = lng + beacon['center']['coordinates'][0]
-                lat = lat + beacon['center']['coordinates'][1]
+            if beacon.center != None and beacon.center['type'] == "Point" and len(
+                    beacon.center['coordinates']) > 1:
+                lng = lng + beacon.center['coordinates'][0]
+                lat = lat + beacon.center['coordinates'][1]
                 count = count + 1
 
         if count > 0:

@@ -8,10 +8,11 @@
     :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
-from step7.src.persistence.BeaconsFilePersistence import BeaconsFilePersistence
+from src.persistence.BeaconsFilePersistence import BeaconsFilePersistence
 from .BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
-class TestBeaconFilePersistence():
+
+class TestBeaconFilePersistence:
     @classmethod
     def setup_class(cls):
         cls.persistence = BeaconsFilePersistence("./data/beacons.test.json")

@@ -8,8 +8,9 @@
     :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
-from step5.src.persistence.BeaconsFilePersistence import BeaconsFilePersistence
-from step5.test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceFixture
+from src.persistence.BeaconsFilePersistence import BeaconsFilePersistence
+from test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceFixture
+
 
 class TestBeaconFilePersistence():
     @classmethod

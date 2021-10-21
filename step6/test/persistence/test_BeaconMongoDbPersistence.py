@@ -11,11 +11,10 @@
 """
 
 import os
-
 from pip_services3_commons.config import ConfigParams
 
-from step6.src.persistence.BeaconsMongoDbPersistence import BeaconsMongoDbPersistence
-from step6.test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceFixture
+from src.persistence.BeaconsMongoDbPersistence import BeaconsMongoDbPersistence
+from test.persistence.BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
 
 class TestBeaconMongoDbPersistence:

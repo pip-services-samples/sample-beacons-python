@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    step8.clients.IBeaconsClientV1
+    step9.clients.IBeaconsClientV1
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     IBeaconsClientV1 interface
@@ -8,8 +8,10 @@
     :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
+from abc import ABC
 
-class IBeaconsClientV1():
+
+class IBeaconsClientV1(ABC):
     def get_beacons_by_filter(self, correlation_id, filter, paging):
         raise NotImplementedError('Method from interface definition')
 

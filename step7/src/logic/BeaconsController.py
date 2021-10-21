@@ -13,16 +13,16 @@ from pip_services3_commons.config import IConfigurable
 from pip_services3_commons.data import FilterParams
 from pip_services3_commons.refer import IReferenceable, Descriptor
 
-from ..logic.IBeaconsController import IBeaconsController
 from ..logic.BeaconsCommandSet import BeaconsCommandSet
+from ..logic.IBeaconsController import IBeaconsController
 
 
 class BeaconsController(IBeaconsController, IConfigurable, IReferenceable, ICommandable):
     _persistence = None
     _commandSet = None
+
     def __init__(self):
         pass
-
 
     def configure(self, config):
         pass
@@ -48,23 +48,23 @@ class BeaconsController(IBeaconsController, IConfigurable, IReferenceable, IComm
         if udis == None or len(udis) == 0:
             return None
 
-        result = self._persistence.get_page_by_filter(correlation_id, FilterParams.from_tuples("site_id", site_id, "udis", udis), None)
+        result = self._persistence.get_page_by_filter(correlation_id,
+                                                      FilterParams.from_tuples("site_id", site_id, "udis", udis), None)
         beacons = result.data
 
         lat = 0
         lng = 0
         count = 0
         for beacon in beacons:
-            if beacon['center'] != None and beacon['center']['type'] == "Point" and len(beacon['center']['coordinates']) > 1:
-                lng = lng + beacon['center']['coordinates'][0]
-                lat = lat + beacon['center']['coordinates'][1]
+            if beacon.center != None and beacon.center['type'] == "Point" and len(beacon.center['coordinates']) > 1:
+                lng = lng + beacon.center['coordinates'][0]
+                lat = lat + beacon.center['coordinates'][1]
                 count = count + 1
 
         if count > 0:
             position = {"type": 'Point', "coordinates": [lng / count, lat / count]}
             return position
         return None
-
 
     def create_beacon(self, correlation_id, entity):
         return self._persistence.create(correlation_id, entity)
